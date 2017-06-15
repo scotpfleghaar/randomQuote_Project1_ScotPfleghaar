@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="colour">
     <div class="container">
         <div id="quote-box">
             <p class="quote">You can do anything but not everything</p>
@@ -18,5 +18,8 @@
         <button id="loadQuote">Show another quote</button>
     </div>
     <script src="js/script.js"></script>
+    <script>
+        setInterval(printQuote, 10000); // here is the intraval section that allows the code to cycle every ten seconds
+    </script>
 </body>
 </html>
