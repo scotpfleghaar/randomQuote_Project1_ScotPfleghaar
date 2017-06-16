@@ -83,7 +83,7 @@ var quotes = [{
     year: ""
 }];
 
-//var quote = ''; //Used to Experment with a shuffling algorithm
+var quote = ''; //Used to Experment with a shuffling algorithm
 var quotes2 = []; //Initiation of quotes2 used in final deciding shuffling algorithm
 
 //Experimentation of the Fisher-Yates Algorithm to see if it would be a good fit for the code challange.
@@ -115,13 +115,13 @@ console.log(quotes[3]); //Test 4
 function getRandomQuote() {
 
     var random = quotes[Math.floor(Math.random() * quotes.length)]; //Random Number Generator scalable for any number of quotes.
-
     var splicedQuote = quotes.splice(random, 1)[0]; //Splicing the first Array to be pushed into the second array.
     quotes2.push(splicedQuote); //Pushing the part from the first quote to the second while insureing previous quotes are not used until completely run through.
     if (quotes.length === 0) {
         quotes = quotes2;
         quotes2 = [];
     }
+    console.log(splicedQuote); //If you review this is it not actually random
     return splicedQuote;
 
 }
